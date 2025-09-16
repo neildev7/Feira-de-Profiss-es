@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Feira de Profissões 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 700px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #1e90ff;
+            margin-right: 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            text-align: center;
+            color: darkblue;
+            margin-bottom: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            color: #1e2a55;
+        }
+        input[type="text"], input[type="email"], select, textarea, input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1e90ff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0f5fa7;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f4ff;
+            color: #1e2a55;
+        }
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        tr:hover {
+            background-color: #e6f2ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inscrição - Feira de Profissões 2025</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="sobre.html">Sobre</a> |
+            <a href="inscricao.html">Inscrição</a>
+        </nav>
+
+        <p>Preencha o formulário para participar de palestras e workshops.</p>
+
+        <form method="post" action="#">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                Nome: <input type="text" name="nome" required minlength="3" maxlength="100">
+                E-mail: <input type="email" name="email" required>
+                Telefone: <input type="text" name="telefone" pattern="\(\d{2}\)\d{5}-\d{4}" title="Formato: (XX)XXXXX-XXXX">
+                CPF: <input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 000.000.000-00">
+            </fieldset>
+
+            <fieldset>
+                <legend>Inscrição</legend>
+                Mensagem: <textarea name="mensagem" required minlength="10" placeholder="Escreva aqui sua mensagem..."></textarea>
+                
+                Área de Interesse:
+                <select name="area" required>
+                    <option value="">Selecione</option>
+                    <option>Tecnologia</option>
+                    <option>Saúde</option>
+                    <option>Engenharia</option>
+                </select>
+
+                Turno:
+                <input type="radio" name="turno" value="manha" required>Manhã
+                <input type="radio" name="turno" value="tarde">Tarde
+                <input type="radio" name="turno" value="noite">Noite<br>
+
+                Interesses:
+                <input type="checkbox" name="interesse" value="palestras">Palestras
+                <input type="checkbox" name="interesse" value="workshops">Workshops
+                <input type="checkbox" name="interesse" value="visitas">Visitas<br>
+
+                Arquivo (PDF): <input type="file" name="arquivo" accept=".pdf">
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+
+        <h2>Exemplos de profissões e palestras</h2>
+        <table>
+            <tr>
+                <th>Profissão</th>
+                <th>Palestra</th>
+            </tr>
+            <tr>
+                <td>Engenheiro de Software</td>
+                <td>Tecnologia</td>
+            </tr>
+            <tr>
+                <td>Médico</td>
+                <td>Medicina</td>
+            </tr>
+            <tr>
+                <td>Engenheiro Civil</td>
+                <td>Construções Sustentáveis</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
